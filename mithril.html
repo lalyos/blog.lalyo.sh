@@ -1,0 +1,40 @@
+<html>
+<body>  
+  <h2>Mithril</h2>
+some experiment with mithril and flems.io:
+  
+ <div id="main" style="height: 400px;">
+</div>
+  
+  
+<script src="https://next.flems.io/flems.html" ></script>
+<script> 
+    Flems(main, {
+        console: false,
+        editable: true,
+        toolbar: false,
+        fileTabs: false,
+        linkTabs: false,
+        files: [{
+            name: 'app.js',
+            compiler: 'babel',
+            content:     "/** @jsx m */\n" +
+  "Page=(\n" +
+  "  <div>\n" +
+  "    <h2>Main</h2>\n" +
+  "  </div>\n" +
+  ")\n" +
+  "m.render(document.body,Page)\n"
+  
+        }],
+        links: [{
+            name: 'mithril',
+            type: 'js',
+            url: 'https://unpkg.com/mithril'
+        }]
+    })
+</script>
+  
+  
+</body>
+</html>
